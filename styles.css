@@ -1,0 +1,119 @@
+body {
+    padding-top: 70px;
+    margin: 0 25px 0 25px;
+}
+
+.code {
+	background-color: #1e1e1e;
+	margin: 15px;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.code pre {
+	padding: 8px;
+	color: #fff;
+}
+
+.keyword {
+	color: #569cd6;
+}
+
+.string {
+	color: #ce9178;
+}
+
+.comment {
+	color: #608b4e;
+}
+
+.header {
+	color: #9cdcfe;
+}
+
+.function {
+	color: #dcdcaa;
+	background-color: #1e1e1e;
+	padding: 3px;
+}
+
+.comment {
+	color: #d4d4d4;
+}
+
+.variable {
+	color: orange;
+}
+
+.highlight {
+	color: #ffffff !important;
+    background-color: #1e1e1e;
+    margin: 6px;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.data-types {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+
+.variables {
+	list-style: i;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+@media (min-width: 1080px) {
+    .code {
+        width: 35%;
+        height: auto;
+    }
+    
+    .data-types {
+    	width: 50%;
+        height: auto;
+    }
+    
+    table {
+    	width: 35%;
+        margin: 0;
+    }
+}
+
+/* Scroll bar Styles */
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #8c8c8c;
+    border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #4f4f4f;
+}

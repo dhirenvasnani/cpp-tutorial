@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>C++ Programming</title>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom CSS -->  
+    <link rel="stylesheet" href="styles.css">  
+  </head>
+    
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">C++ Programming</a>
+      </div>
+    </nav>
+    
+    <!-- Introduction -->
+    <section>
+        <h2>Introduction:</h2>
+        <p>C++ was developed by <strong>Bjarne Stroustrup</strong> at Bell Labs during the early 1980s. It was designed to support the features of C such as <strong>efficiency</strong> & low-level support for system coding. New features added were classes with inheritance & virtual functions, were inspired from <strong>Simula67</strong> language, & <strong>Operator overloading</strong> was inspired from <strong>Algol68</strong>. Described as <strong>superset of C</strong>, C++ has full support for <strong>object-oriented programming (OOPs)</strong>.</p>
+    </section>
+
+    <hr>
+
+    <!-- Getting Started -->
+    <section>
+        <h2>Getting Started:</h2>
+        <p>To write any C++ Program, you need a text editor. Text editor allows you to create & modify text files (<strong>Notepad++</strong>, <strong>Sublime</strong>, etc). After writing the code we must make sure that it is error-free, this process is known as <strong>Compilation</strong> & <strong>Compiler</strong> is used to make sure that our code is error-free. It converts the code into machine understandable code (object code) & also displays syntax errors (if present) in the program.</p>
+        <p>C++ programs can be created using any text editor. Some systems like <strong>Visual Studio</strong> & <strong>Code::Blocks</strong> provide an integrated program development environment under different operating systems (like Windows, Linux). IDE Provides a built-in text editor & a compiler. C++ programs can be also compiled using command-line tools (like <strong>g++</strong> & <strong>clang++</strong>).</p>
+    </section>
+    
+    <hr>
+    
+    <!-- Sample Program-->
+    <section>
+		<h2>Writing a Simple C++ Program:</h2>
+		<div class="code">
+          <pre>
+<span class="header">#include &lt;iostream&gt;
+using namespace std;</span>
+
+<span class="function">int main()</span> {
+  <span class="keyword">cout</span> &lt;&lt "Hello, World.";
+  <span class="keyword">return</span> 0;
+}        </pre>
+       </div>
+       
+       <br>
+       
+       <h4>Program Explanation:</h4>
+       <p>Here the <span class="highlight header">#include &lt;iostream&gt;</span> in the program deals with including of header file (iostream  is Input-Output Stream, also known as Preprocessor Directive) it is needed to support all built-in functions like <span class="highlight keyword">cout</span> (in this example), <span class="highlight header">using namespace std;</span> allows us to access elements from Standard C++ Library.</p>
+       <p>The the fourth line is the Main Function within the body of which you start writing the code for your program. Every C++ Program must include one & only one main function.</p>
+       <p>The code written between the curly braces { } is the program body, the 5th line will output the text enclosed in quotation marks ("") on the console. The sixth line <span class="highlight keyword">return 0;</span> is used to indicate that the program is executed successfully.</p>
+       
+       <br>
+       
+       <h4>Program Output:</h4>
+       <div class="code">
+		   <pre>
+Hello, World.		   
+		   </pre>
+       </div>
+       <br>
+    </section>
+    
+    <hr>
+    
+    <!-- Data Types -->
+    <section>
+		<h2>Data Types in C++:</h2>
+		<p>The chart below shows various data types in C++,</p>
+	    <a href="images/data-types.png"><img class="data-types" src="dt.png"></a>
+	  
+        <br>
+        <br>
+		
+		<h4>Basic Datatypes</h4>
+		<ol type="1">
+	      <li><strong>int:</strong> It stands for 'integer' and is used to represent whole numbers.</li>
+          <li><strong>char:</strong> It stands for 'character' and is used to represent characters such as letters.</li>
+          <li><strong>float:</strong> It is used to represent decimal numbers with upto 6-7 digits.</li>
+          <li><strong>double:</strong> It is similar to float but can hold more decimal places with upto 15-16 digits.</li>
+          <li><strong>void:</strong> It is used as the return type for functions that do not return a value.</li>
+        </ol>
+    </section>
+    
+    <hr>
+    
+    <!-- Variables -->
+    <section>
+    	<h2>Variables in C++:</h2>
+        <p>Variables are used to store information/data. The data stored in a variable can be changed during program execution. In C++ all variables must be declared before use.</p>
+        
+        <br>
+        	
+        <h4>Rules for Declaring Variables in C++:</h4>
+        <ol type="i">
+        	<li>Variable names must start with a letter (A to Z) & (a to z).</li>
+        	<li>Data type must be specified before declaring the variable name.</li> 
+            <li>Keywords (like <span class="highlight keyword">int</span>, <span class="highlight keyword">float</span>, <span class="highlight keyword">return</span>, <span class="highlight keyword">char</span>) cannot be used as variables name.</li>   
+            <li>Variables with two same names can't be declared.</li>
+            <li>Variables cannot contain whitespaces.</li>
+            <li>Variables cannot contain special characters except underscores.</li>
+        </ol>  
+        
+        <br>
+        	
+        <h4>Syntax for Declaration of a Variable:</h4>
+        <div class="code">
+        	<pre>
+<span class="keyword">datatype</span> <span class="variable">variable_name</span>; 
+</pre>
+        </div>
+        
+        <br>
+        	
+        <h4>Example:</h4>
+        <div class="code">
+          <pre>
+<span class="header">#include &lt;iostream&gt;
+using namespace std;</span>
+
+<span class="function">int main()</span> {
+  <span class="keyword">int</span> <span class="variable">myVar</span> = 58;  
+  <span class="comment">//Declares a variable named myVar & 
+  assigns integer value of 58 to it.</span>
+  <span class="keyword">return</span> 0;
+}        </pre>
+    </section>
+    
+    <hr>
+  	
+    <!-- Constants -->
+    <section>
+    	<h2>Constants:</h2>
+        <p>Constants are declared with the <strong>"const"</strong> keyword, a type, their name, and an assignment of their constant value. This value must match the declared type, & its fixed (constant) for the duration of the programs.</p>
+        
+        <br>
+        	
+        <h4>Example:</h4>
+        <div class="code">
+        	<pre>
+<span class="header">#include &lt;iostream&gt;
+using namespace std;</span>
+
+<span class="function">int main()</span> {
+  <span class="keyword">const int</span> <span class="variable">pie</span> = 3.14;  
+  <span class="comment">//Declares a constant named pie and
+  assigns integer value of 3.14 to it.</span>
+  <span class="keyword">return</span> 0;
+}        </pre> 
+        </div>       	
+    </section>
+    
+   <hr>
+   	
+   <section>
+   	<h2>Congratulations!</h2>
+       <p>Welcome to the programming club! You finished learning the basics of C++!</p>
+   </section>
+   
+   <hr>
+   
+   <footer>
+   	<h5>Next: <a href="operators.html">Operators in C++</a></h5>
+       <hr>
+   </footer>
+ 
+  </body>
+</html>
