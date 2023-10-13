@@ -6,31 +6,57 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Custom CSS -->  
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <nav class="navbar bg-dark navbar-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">C++ Programming</a>
+                <div class="d-flex align-items-center">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">C++ Programming</a>
+                </div>
             </div>
         </nav>
+        
+        <!-- Offcanvas Slider -->
+        <div class="offcanvas offcanvas-start" id="demo">
+            <div class="offcanvas-header">
+                <h2 class="offcanvas-title">C++ Programming</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <a class="offcanvas-link active" href="index.html">Basics of C++</a> <br>
+                <a class="offcanvas-link" href="operators.html">Operators in C++</a> <br>
+                <a class="offcanvas-link" href="comments.html">Comments in C++</a> <br>
+                <a class="offcanvas-link" href="control-structures.html">Control Structures in C++</a> <br>
+                <a class="offcanvas-link" href="loops.html">Loops in C++</a> <br>
+                <a class="offcanvas-link" href="functions.html">Functions in C++</a> <br>                
+            </div>
+        </div>
+        
         <!-- Introduction -->
         <section>
             <h2>Introduction:</h2>
             <p>C++ was developed by <strong>Bjarne Stroustrup</strong> at Bell Labs during the early 1980s. It was designed to support the features of C such as <strong>efficiency</strong> & low-level support for system coding. New features added were classes with inheritance & virtual functions, were inspired from <strong>Simula67</strong> language, & <strong>Operator overloading</strong> was inspired from <strong>Algol68</strong>. Described as <strong>superset of C</strong>, C++ has full support for <strong>object-oriented programming (OOPs)</strong>.</p>
         </section>
+        
         <hr>
+            
         <!-- Getting Started -->
         <section>
             <h2>Getting Started:</h2>
             <p>To write any C++ Program, you need a text editor. Text editor allows you to create & modify text files (<strong>Notepad++</strong>, <strong>Sublime</strong>, etc). After writing the code we must make sure that it is error-free, this process is known as <strong>Compilation</strong> & <strong>Compiler</strong> is used to make sure that our code is error-free. It converts the code into machine understandable code (object code) & also displays syntax errors (if present) in the program.</p>
             <p>C++ programs can be created using any text editor. Some systems like <strong>Visual Studio</strong> & <strong>Code::Blocks</strong> provide an integrated program development environment under different operating systems (like Windows, Linux). IDE Provides a built-in text editor & a compiler. C++ programs can be also compiled using command-line tools (like <strong>g++</strong> & <strong>clang++</strong>).</p>
         </section>
+        
         <hr>
+            
         <!-- Sample Program-->
         <section>
             <h2>Writing a Simple C++ Program:</h2>
@@ -59,6 +85,7 @@ Hello, World.
             <br>
         </section>
         <hr>
+            
         <!-- Data Types -->
         <section>
             <h2>Data Types in C++:</h2>
@@ -76,6 +103,7 @@ Hello, World.
             </ol>
         </section>
         <hr>
+            
         <!-- Variables -->
         <section>
             <h2>Variables in C++:</h2>
@@ -112,6 +140,7 @@ using namespace std;</span>
 }        </pre>
         </section>
         <hr>
+            
         <!-- Constants -->
         <section>
             <h2>Constants:</h2>
@@ -139,7 +168,8 @@ using namespace std;</span>
         <hr>
         <footer>
             <h5>Next: <a href="operators.html">Operators in C++</a></h5>
+            <p>Found any Error or Mistake? <a href="mailto:dhirenvasnani+cpp@gmail.com">Let me know by clicking here</a></p>
             <hr>
         </footer>
     </body>
-																																					   </html>
+</html>

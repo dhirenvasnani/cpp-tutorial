@@ -3,9 +3,34 @@ body {
 	margin: 0 25px 0 25px;
 }
 
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+
+.offcanvas {
+    width: 65% !important;
+}
+
+.offcanvas-link {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    display: block; /* Make the links block-level for full width */
+}
+
+.offcanvas-link.active {
+    color: #fff;
+    background-color: #343a40; /* Background color for active link */
+}
+
 .code {
 	background-color: #1e1e1e;
-	margin: 15px;
 	border-radius: 8px;
 	overflow: hidden;
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -85,6 +110,10 @@ th {
 }
 
 @media (min-width: 1080px) {
+    .offcanvas {
+        width: 40% !important;
+    }
+    
 	.code {
 		width: 35%;
 		height: auto;
