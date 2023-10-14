@@ -129,3 +129,25 @@ th {
 		margin: 0;
 	}
 }
+
+/* Scroll bar Styles */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #8c8c8c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #4f4f4f;
+}
