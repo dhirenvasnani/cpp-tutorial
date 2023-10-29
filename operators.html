@@ -17,13 +17,12 @@
             <div class="container-fluid">
                 <div class="d-flex align-items-center">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
-                        <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                     </button>
                     <a class="navbar-brand" href="#">C++ Programming</a>
                 </div>
             </div>
         </nav>
-        
         <!-- Offcanvas Slider -->
         <div class="offcanvas offcanvas-start" id="demo">
             <div class="offcanvas-header">
@@ -31,24 +30,22 @@
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
-                <a class="offcanvas-link" href="index.html">Basics of C++</a> <br>
-                <a class="offcanvas-link active" href="operators.html">Operators in C++</a> <br>
-                <a class="offcanvas-link" href="comments.html">Comments in C++</a> <br>
-                <a class="offcanvas-link" href="control-structures.html">Control Structures in C++</a> <br>
-                <a class="offcanvas-link" href="loops.html">Loops in C++</a> <br>
-                <a class="offcanvas-link" href="functions.html">Functions in C++</a> <br>                 
+                <a class="offcanvas-link" href="index.html">1. Basics of C++</a> <br>
+                <a class="offcanvas-link active" href="operators.html">2. Operators in C++</a> <br>
+                <a class="offcanvas-link" href="comments.html">3. Comments in C++</a> <br>
+                <a class="offcanvas-link" href="control-structures.html">4. Control Structures in C++</a> <br>
+                <a class="offcanvas-link" href="loops.html">5. Loops in C++</a> <br>
+                <a class="offcanvas-link" href="functions.html">6. Functions in C++</a> <br>                
             </div>
         </div>
-        
         <!-- Previous -->
         <section>
             <h5>Previous: <a href="index.html">Basics of C++</a></h5>
         </section>
         <hr>
-            
         <!-- Operators Introduction -->	
         <section>
-            <h2>Operators in C++:</h2>
+            <h2>2.1 Introduction to Operators:</h2>
             <p>An operator does some operations on operands and the operation done is normally specified by operator's symbol.</p>
             <p>In the example below, we use <span class="highlight operator">+</span> operator to add two integers.</p>
             <div class="code">
@@ -70,11 +67,13 @@ using namespace std;</span>
             <div class="code">
                 <pre>
 <span>12</span>        	
-        	</pre>
+        	    </pre>
             </div>
-            <br>
-            <h4>Arithmetic Operators:</h4>
-            <p>Operators used to perform common mathematical operations are known as arithmetic operations.</p>
+        </section>
+        <hr>
+        <section>
+            <h2>2.2 Arithmetic Operators:</h2>
+            <p>Operators used to perform common mathematical operations are known as arithmetic operators.</p>
             <table>
                 <tr>
                     <th>Operator</th>
@@ -118,19 +117,125 @@ using namespace std;</span>
                 </tr>
             </table>
         </section>
-        
         <hr>
-            
+        <section>
+            <h2>2.3 Relational Operators:</h2>
+            <p>Operators used for comparing numeric, character or logical data are known as Relational Operators. The result of comparision can be either true or false.</p>
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Equal to (==)</td>
+                    <td>Checks if two values are equal.</td>
+                    <td>num1 == num2</td>
+                </tr>
+                <tr>
+                    <td>Not Equal to (!=)</td>
+                    <td>Checks if two values are not equal.</td>
+                    <td>num1 != num2</td>
+                </tr>
+                <tr>
+                    <td>Greater than (&gt;)</td>
+                    <td>Checks if the left value is greater than right</td>
+                    <td>num1 &gt; num2</td>
+                </tr>
+                <tr>
+                    <td>Less than (&lt;)</td>
+                    <td>Checks if the left value is less than right</td>
+                    <td>num1 &lt; num2</td>
+                </tr>
+                <tr>
+                    <td>Greater than equal to (&gt;=)</td>
+                    <td>Checks if the left value is greater than equal to right</td>
+                    <td>num1 &gt;= num2</td>
+                </tr>
+                <tr>
+                    <td>Less than equal to (&lt;=)</td>
+                    <td>Checks if the left value is less than or equal to right</td>
+                    <td>num1 &lt;= num2</td>
+                </tr>
+            </table>
+        </section>
+        <hr>
+        <section>
+            <h2>2.4 Assignment Operators:</h2>
+            <p>Operators used for assigning values to the variables are called assignment operators. The left side operand of the assignment operator is a variable and right side operand of the assignment operator is a value.</p>
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>=</td>
+                    <td>Assignment</td>
+                    <td>x = 5;</td>
+                </tr>
+                <tr>
+                    <td>+=</td>
+                    <td>Add and assign</td>
+                    <td>x += 3</td>
+                </tr>
+                <tr>
+                    <td>-=</td>
+                    <td>Subtract and assign</td>
+                    <td>x -= 2</td>
+                </tr>
+                <tr>
+                    <td>*=</td>
+                    <td>Multiply and assign</td>
+                    <td>x *= 4</td>
+                </tr>
+                <tr>
+                    <td>/=</td>
+                    <td>Divide and assign</td>
+                    <td>x /= 2</td>
+                </tr>
+                <tr>
+                    <td>%=</td>
+                    <td>Modulus and assign</td>
+                    <td>x %= 2</td>
+                </tr>
+            </table>
+        </section>
+        <hr>
+        <section>
+        <h2>2.5 Logical Operators:</h2>
+        <p>Operators used to connect two or more conditions or expressions together are called logical operators.</p>
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>&&</td>
+                <td>Logical AND</td>
+                <td>x && y</td>
+            </tr>
+            <tr>
+                <td>||</td>
+                <td>Logical OR</td>
+                <td>x || y</td>
+            </tr>
+            <tr>
+                <td>!</td>
+                <td>Logical NOT</td>
+                <td>!x</td>
+            </tr>
+        </table>
+        <hr>
         <section>
             <h2>Congratulations!</h2>
             <p>You've mastered the essential operators in C++. Now, you're equipped to manipulate data like a pro.</p>
         </section>
-        
         <hr>
-            
         <footer>
             <h5>Next: <a href="comments.html">Comments in C++</a></h5>
-            <p>Found any Error or Mistake? <a href="mailto:dhirenvasnani+cpp@gmail.com">Let me know by clicking here</a></p>            
+            <p>Found any Error or Mistake? <a href="mailto:dhirenvasnani+cpp@gmail.com">Let me know by clicking here</a></p>
             <hr>
         </footer>
     </body>
