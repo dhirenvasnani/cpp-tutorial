@@ -111,7 +111,7 @@ th {
 
 @media (min-width: 1080px) {
     .offcanvas {
-        width: 40% !important;
+        width: 30% !important;
     }
     
 	.code {
