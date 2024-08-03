@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Programming - Operators</title>
+    <!-- Material Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/src/styles/styles.css?cache_refresh">
+    <link rel="stylesheet" href="/src/styles/code.css?cache_refresh">
+    <!-- Javascript -->
+    <script src="/src/scripts/main.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li onclick="toggleSidebar()"><a><span class="material-symbols-rounded">menu</span></a></li>
+            <li><a href="#">C++ - Operators</a></li>
+        </ul>
+    </nav>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="closeBtn"><span onclick="toggleSidebar()" class="material-symbols-rounded">close</span></div>
+        <div class="navigationContainer">
+            <ul class="dropdown-menu">
+                <li>
+                    <div class="navLink">
+                        <button class="dropdown-toggle"></button>
+                        <a href="/index">Basics</a>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><a href="/index#introduction">Introduction</a></li>
+                        <li><a href="/index#getting-started">Getting Started</a></li>
+                        <li><a href="/index#simple-program">Writing a Simple Program</a></li>
+                        <li><a href="/index#data-types">Data Types</a></li>
+                        <li><a href="/index#variables">Variables</a></li>
+                        <li><a href="/index#constants">Constants</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <div class="navLink">
+                        <button class="dropdown-toggle"></button>
+                        <a href="/pages/operators">Operators</a>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><a href="/pages/operators#introduction">Introduction</a></li>
+                        <li><a href="/pages/operators#arithmetic">Arithmetic Operators</a></li>
+                        <li><a href="/pages/operators#relational">Relational Operators</a></li>
+                        <li><a href="/pages/operators#assignment">Assignment Operators</a></li>
+                        <li><a href="/pages/operators#logical">Logical Operators</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="navLink">
+                        <button class="dropdown-toggle"></button>
+                        <a href="/pages/comments#introduction">Comments</a>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><a href="/pages/comments#introduction">Introduction</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="navLink">
+                        <button class="dropdown-toggle"></button>
+                        <a href="/pages/control-structures#introduction">Control Structures</a>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><a href="/pages/control-structures#introduction">Introduction</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="navLink">
+                        <button class="dropdown-toggle"></button>
+                        <a href="/pages/loops#introduction">Loops</a>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><a href="/pages/loops#introduction">Introduction</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="navLink">
+                        <button class="dropdown-toggle"></button>
+                        <a href="/pages/functions#introduction">Functions</a>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><a href="/pages/functions#introduction">Introduction</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="content">
+        <main id="introduction">
+            <h2>Introduction to Operators:</h2>
+            <p>An operator does some operations on operands and the operation done is normally specified by operator's
+                symbol.
+            </p>
+            <p>In the example below, we use <code class="highlight operator">+</code> operator to add two integers.</p>
+            <div class="code">
+                <pre>
+<span class="header">#include &lt;iostream&gt;
+using namespace std;</span>
+            
+<span class="function">int main()</span> {               
+    <span class="keyword">int</span> <span class="variable">num1, num2, result</span>; <span class="comment">//Declarations of num1, num2 & result variable</span>
+    <span class="variable">num1</span> = 5;  <span class="comment">//Assigning integer 5 to variable `num1`</span>
+    <span class="variable">num2</span> = 7;  <span class="comment">//Assigning integer 7 to variable `num2`</span>
+    <span class="variable">result</span> = <span class="variable">num1</span> + <span class="variable">num2</span>;  <span class="comment">//Storing the result of addition in `result`</span>
+    cout &lt; &lt; result; <span class="comment">//Displays the result</span>
+    <span class="keyword">return</span> 0;
+}              
+                </pre>
+            </div>
+
+            <h3>Program Output:</h3>
+            <div class="code">
+                <pre>
+<span>12</span>        	
+                </pre>
+            </div>
+        </main>
+
+        <hr>
+
+        <section id="arithmetic">
+            <h2>Arithmetic Operators:</h2>
+            <p>Operators used to perform common mathematical operations are known as arithmetic operators.</p>
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Addition (+)</td>
+                    <td>Used for adding two or more values.</td>
+                    <td>num1 + num2</td>
+                </tr>
+                <tr>
+                    <td>Subtraction (-)</td>
+                    <td>Used for subtracting one value from another.</td>
+                    <td>num1 - num2</td>
+                </tr>
+                <tr>
+                    <td>Multiplication (*)</td>
+                    <td>Used for multiplying two or more values.</td>
+                    <td>num1 * num2</td>
+                </tr>
+                <tr>
+                    <td>Division (/)</td>
+                    <td>Used for dividing one value by another.</td>
+                    <td>num1 / num2</td>
+                </tr>
+                <tr>
+                    <td>Modulus (%)</td>
+                    <td>Returns the division remainder</td>
+                    <td>num1 % num2</td>
+                </tr>
+                <tr>
+                    <td>Increment (++)</td>
+                    <td>Increases the value of a variable by 1</td>
+                    <td>a++</td>
+                </tr>
+                <tr>
+                    <td>Decrement (--)</td>
+                    <td>Decreases the value of a variable by 1</td>
+                    <td>a--</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="relational">
+            <h2>Relational Operators:</h2>
+            <p>Operators used for comparing numeric, character or logical data are known as Relational Operators. The
+                result of
+                comparision can be either true or false.</p>
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Equal to (==)</td>
+                    <td>Checks if two values are equal.</td>
+                    <td>num1 == num2</td>
+                </tr>
+                <tr>
+                    <td>Not Equal to (!=)</td>
+                    <td>Checks if two values are not equal.</td>
+                    <td>num1 != num2</td>
+                </tr>
+                <tr>
+                    <td>Greater than (&gt;)</td>
+                    <td>Checks if the left value is greater than right</td>
+                    <td>num1 &gt; num2</td>
+                </tr>
+                <tr>
+                    <td>Less than (&lt;)</td>
+                    <td>Checks if the left value is less than right</td>
+                    <td>num1 &lt; num2</td>
+                </tr>
+                <tr>
+                    <td>Greater than equal to (&gt;=)</td>
+                    <td>Checks if the left value is greater than equal to right</td>
+                    <td>num1 &gt;= num2</td>
+                </tr>
+                <tr>
+                    <td>Less than equal to (&lt;=)</td>
+                    <td>Checks if the left value is less than or equal to right</td>
+                    <td>num1 &lt;= num2</td>
+                </tr>
+            </table>
+        </section>
+        <hr>
+        <section id="assignment">
+            <h2>Assignment Operators:</h2>
+            <p>Operators used for assigning values to the variables are called assignment operators. The left side
+                operand of
+                the assignment operator is a variable and right side operand of the assignment operator is a value.</p>
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>=</td>
+                    <td>Assignment</td>
+                    <td>x = 5;</td>
+                </tr>
+                <tr>
+                    <td>+=</td>
+                    <td>Add and assign</td>
+                    <td>x += 3</td>
+                </tr>
+                <tr>
+                    <td>-=</td>
+                    <td>Subtract and assign</td>
+                    <td>x -= 2</td>
+                </tr>
+                <tr>
+                    <td>*=</td>
+                    <td>Multiply and assign</td>
+                    <td>x *= 4</td>
+                </tr>
+                <tr>
+                    <td>/=</td>
+                    <td>Divide and assign</td>
+                    <td>x /= 2</td>
+                </tr>
+                <tr>
+                    <td>%=</td>
+                    <td>Modulus and assign</td>
+                    <td>x %= 2</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="logical">
+            <h2>Logical Operators:</h2>
+            <p>Operators used to connect two or more conditions or expressions together are called logical operators.
+            </p>
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>&&</td>
+                    <td>Logical AND</td>
+                    <td>x && y</td>
+                </tr>
+                <tr>
+                    <td>||</td>
+                    <td>Logical OR</td>
+                    <td>x || y</td>
+                </tr>
+                <tr>
+                    <td>!</td>
+                    <td>Logical NOT</td>
+                    <td>!x</td>
+                </tr>
+            </table>
+
+            <hr>
+
+            <section>
+                <h2>Congratulations!</h2>
+                <p>You've mastered the essential operators in C++. Now, you're equipped to manipulate data like a pro.
+                </p>
+            </section>
+
+            <hr>
+
+            <footer>
+                <h3>Next: <a href="/pages/comments.html">Comments in C++</a></h3>
+                <p>Found any Error or Mistake? <a href="mailto:dhirenvasnani+cpp@gmail.com">Let me know by clicking
+                        here</a></p>
+
+            </footer>
+    </div>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>

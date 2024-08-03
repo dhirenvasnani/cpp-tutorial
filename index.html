@@ -1,175 +1,280 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>C++ Programming</title>
-        <!-- Meta tags -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Custom CSS -->  
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <!-- Navbar -->
-        <nav class="navbar bg-dark navbar-dark fixed-top">
-            <div class="container-fluid">
-                <div class="d-flex align-items-center">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">C++ Programming</a>
-                </div>
-            </div>
-        </nav>
-        
-        <!-- Offcanvas Slider -->
-        <div class="offcanvas offcanvas-start" id="demo">
-            <div class="offcanvas-header">
-                <h2 class="offcanvas-title">C++ Programming</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body">
-                <a class="offcanvas-link active" href="index.html">1. Basics of C++</a> <br>
-                <a class="offcanvas-link" href="operators.html">2. Operators in C++</a> <br>
-                <a class="offcanvas-link" href="comments.html">3. Comments in C++</a> <br>
-                <a class="offcanvas-link" href="control-structures.html">4. Control Structures in C++</a> <br>
-                <a class="offcanvas-link" href="loops.html">5. Loops in C++</a> <br>
-                <a class="offcanvas-link" href="functions.html">6. Functions in C++</a> <br>                
-            </div>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Programming - Basics</title>
+    <!-- Material Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/src/styles/styles.css?cache_refresh">
+    <link rel="stylesheet" href="/src/styles/code.css?cache_refresh">
+    <!-- Javascript -->
+    <script src="/src/scripts/main.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li onclick="toggleSidebar()"><a><span class="material-symbols-rounded">menu</span></a></li>
+            <li><a href="#">C++ - Basics</a></li>
+        </ul>
+    </nav>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="closeBtn"><span onclick="toggleSidebar()" class="material-symbols-rounded">close</span></div>
+        <div class="navigationContainer">
+            <ul class="dropdown-menu">
+                <li class="active">
+                    <div class="navLink">
+                        <button class="dropdown-toggle"></button>
+                        <a href="/index">Basics</a>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><a href="/index#introduction">Introduction</a></li>
+                        <li><a href="/index#getting-started">Getting Started</a></li>
+                        <li><a href="/index#simple-program">Writing a Simple Program</a></li>
+                        <li><a href="/index#data-types">Data Types</a></li>
+                        <li><a href="/index#variables">Variables</a></li>
+                        <li><a href="/index#constants">Constants</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="navLink">
+                        <button class="dropdown-toggle"></button>
+                        <a href="/pages/operators#introduction">Operators</a>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><a href="/pages/operators#introduction">Introduction</a></li>
+                        <li><a href="/pages/operators#arithmetic">Arithmetic Operators</a></li>
+                        <li><a href="/pages/operators#relational">Relational Operators</a></li>
+                        <li><a href="/pages/operators#assignment">Assignment Operators</a></li>
+                        <li><a href="/pages/operators#logical">Logical Operators</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="navLink">
+                        <button class="dropdown-toggle"></button>
+                        <a href="/pages/comments#introduction">Comments</a>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><a href="/pages/comments#introduction">Introduction</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="navLink">
+                        <button class="dropdown-toggle"></button>
+                        <a href="/pages/control-structures#introduction">Control Structures</a>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><a href="/pages/control-structures#introduction">Introduction</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="navLink">
+                        <button class="dropdown-toggle"></button>
+                        <a href="/pages/loops#introduction">Loops</a>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><a href="/pages/loops#introduction">Introduction</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="navLink">
+                        <button class="dropdown-toggle"></button>
+                        <a href="/pages/functions#introduction">Functions</a>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><a href="/pages/functions#introduction">Introduction</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-        
-        <!-- Introduction -->
-        <section>
-            <h2>1.1 Introduction:</h2>
-            <p>C++ was developed by <strong>Bjarne Stroustrup</strong> at Bell Labs during the early 1980s. It was designed to support the features of C such as <strong>efficiency</strong> & low-level support for system coding. New features added were classes with inheritance & virtual functions, were inspired from <strong>Simula67</strong> language, & <strong>Operator overloading</strong> was inspired from <strong>Algol68</strong>. Described as <strong>superset of C</strong>, C++ has full support for <strong>object-oriented programming (OOPs)</strong>.</p>
-        </section>
-        
+    </aside>
+
+    <div class="content">
+        <main id="introduction">
+            <h2>Introduction:</h2>
+            <p>C++ was developed by <strong>Bjarne Stroustrup</strong> at Bell Labs during the early 1980s. It was
+                designed
+                to
+                support the features of C such as <strong>efficiency</strong> & low-level support for system coding. New
+                features
+                added were classes with inheritance & virtual functions, were inspired from <strong>Simula67</strong>
+                language, &
+                <strong>Operator overloading</strong> was inspired from <strong>Algol68</strong>. Described as
+                <strong>superset of
+                    C</strong>, C++ has full support for <strong>object-oriented programming (OOPs)</strong>.
+            </p>
+        </main>
+
         <hr>
-            
-        <!-- Getting Started -->
-        <section>
-            <h2>1.2 Getting Started:</h2>
-            <p>To write any C++ Program, you need a text editor. Text editor allows you to create & modify text files (<strong>Notepad++</strong>, <strong>Sublime</strong>, etc). After writing the code we must make sure that it is error-free, this process is known as <strong>Compilation</strong> & <strong>Compiler</strong> is used to make sure that our code is error-free. It converts the code into machine understandable code (object code) & also displays syntax errors (if present) in the program.</p>
-            <p>C++ programs can be created using any text editor. Some systems like <strong>Visual Studio</strong> & <strong>Code::Blocks</strong> provide an integrated program development environment under different operating systems (like Windows, Linux). IDE Provides a built-in text editor & a compiler. C++ programs can be also compiled using command-line tools (like <strong>g++</strong> & <strong>clang++</strong>).</p>
+
+        <section id="getting-started">
+            <h2>Getting Started:</h2>
+            <p>To write any C++ Program, you need a text editor. Text editor allows you to create & modify text files
+                (<strong>Notepad++</strong>, <strong>Sublime</strong>, etc). After writing the code we must make sure
+                that it is
+                error-free, this process is known as <strong>Compilation</strong> & <strong>Compiler</strong> is used to
+                make sure
+                that our code is error-free. It converts the code into machine understandable code (object code) & also
+                displays
+                syntax errors (if present) in the program.</p>
+            <p>C++ programs can be created using any text editor. Some systems like <strong>Visual Studio</strong> &
+                <strong>Code::Blocks</strong> provide an integrated program development environment under different
+                operating
+                systems (like Windows, Linux). IDE Provides a built-in text editor & a compiler. C++ programs can be
+                also compiled
+                using command-line tools (like <strong>g++</strong> & <strong>clang++</strong>).
+            </p>
         </section>
-        
+
         <hr>
-            
-        <!-- Sample Program-->
-        <section>
-            <h2>1.3 Writing a Simple C++ Program:</h2>
+
+        <section id="simple-program">
+            <h2>Writing a Simple C++ Program:</h2>
             <div class="code">
                 <pre>
 <span class="header">#include &lt;iostream&gt;
 using namespace std;</span>
-
+            
 <span class="function">int main()</span> {
-  <span class="keyword">cout</span> &lt;&lt "Hello, World.";
-  <span class="keyword">return</span> 0;
-}        </pre>
+    <span class="keyword">cout</span> &lt;&lt "Hello, World.";
+    <span class="keyword">return</span> 0;
+ }        
+</pre>
             </div>
-            <br>
-            <h4>Program Explanation:</h4>
-            <p>Here the <span class="highlight header">#include &lt;iostream&gt;</span> in the program deals with including of header file (iostream  is Input-Output Stream, also known as Preprocessor Directive) it is needed to support all built-in functions like <span class="highlight keyword">cout</span> (in this example), <span class="highlight header">using namespace std;</span> allows us to access elements from Standard C++ Library.</p>
-            <p>The the fourth line is the Main Function within the body of which you start writing the code for your program. Every C++ Program must include one & only one main function.</p>
-            <p>The code written between the curly braces { } is the program body, the 5th line will output the text enclosed in quotation marks ("") on the console. The sixth line <span class="highlight keyword">return 0;</span> is used to indicate that the program is executed successfully.</p>
-            <br>
-            <h4>Program Output:</h4>
+            <h3>Program Explanation:</h3>
+            <p>Here the <code class="highlight header">#include &lt;iostream&gt;</code> in the program deals with
+                including of
+                header file (iostream is Input-Output Stream, also known as Preprocessor Directive) it is needed to
+                support all
+                built-in functions like <code class="highlight keyword">cout</code> (in this example), <code
+                    class="highlight header">using namespace std;</code> allows us to access elements from Standard C++
+                Library.</p>
+            <p>The the fourth line is the Main Function within the body of which you start writing the code for your
+                program. Every
+                C++ Program must include one & only one main function.</p>
+            <p>The code written between the curly braces { } is the program body, the 5th line will output the text
+                enclosed in
+                quotation marks ("") on the console. The sixth line <code class="highlight keyword">return 0;</code> is
+                used to
+                indicate that the program is executed successfully.</p>
+            <h3>Program Output:</h3>
             <div class="code">
                 <pre>
 Hello, World.		   
-		   </pre>
+            	</pre>
             </div>
-            <br>
         </section>
+
         <hr>
-            
-        <!-- Data Types -->
-        <section>
-            <h2>1.4 Data Types in C++:</h2>
+
+        <section id="data-types">
+            <h2>Data Types:</h2>
             <p>The chart below shows various data types in C++,</p>
-            <a href="images/data-types.png"><img class="data-types" src="images/data-types.png"></a>
-            <br>
-            <br>
-            <h4>Basic Datatypes</h4>
+            <a href="/src/images/data-types.png"><img src="/src/images/data-types.png" class="dataTypeImg"></a>
+            <h3>Basic Datatypes:</h3>
             <ol type="1">
                 <li><strong>int:</strong> It stands for 'integer' and is used to represent whole numbers.</li>
-                <li><strong>char:</strong> It stands for 'character' and is used to represent characters such as letters.</li>
+                <li><strong>char:</strong> It stands for 'character' and is used to represent characters such as
+                    letters.</li>
                 <li><strong>float:</strong> It is used to represent decimal numbers with upto 6-7 digits.</li>
-                <li><strong>double:</strong> It is similar to float but can hold more decimal places with upto 15-16 digits.</li>
+                <li><strong>double:</strong> It is similar to float but can hold more decimal places with upto 15-16
+                    digits.</li>
                 <li><strong>void:</strong> It is used as the return type for functions that do not return a value.</li>
             </ol>
         </section>
+
         <hr>
-            
-        <!-- Variables -->
-        <section>
-            <h2>1.5 Variables in C++:</h2>
-            <p>Variables are used to store information/data. The data stored in a variable can be changed during program execution. In C++ all variables must be declared before use.</p>
-            <br>
-            <h4>Rules for Declaring Variables in C++:</h4>
+
+        <section id="variables">
+            <h2>Variables:</h2>
+            <p>Variables are used to store information/data. The data stored in a variable can be changed during program
+                execution.
+                In C++ all variables must be declared before use.</p>
+            <h3>Rules for Declaring Variables in C++:</h3>
             <ol type="i">
                 <li>Variable names must start with a letter (A to Z) & (a to z).</li>
                 <li>Data type must be specified before declaring the variable name.</li>
-                <li>Keywords (like <span class="highlight keyword">int</span>, <span class="highlight keyword">float</span>, <span class="highlight keyword">return</span>, <span class="highlight keyword">char</span>) cannot be used as variables name.</li>
+                <li>Keywords (like <code class="highlight keyword">int</code>, <code
+                        class="highlight keyword">float</code>, <code class="highlight keyword">return</code>, <code
+                        class="highlight keyword">char</code>) cannot be used as
+                    variables name.</li>
                 <li>Variables with two same names can't be declared.</li>
                 <li>Variables cannot contain whitespaces.</li>
                 <li>Variables cannot contain special characters except underscores.</li>
             </ol>
             <br>
-            <h4>Syntax for Declaration of a Variable:</h4>
+            <h3>Syntax for Declaration of a Variable:</h3>
             <div class="code">
                 <pre>
-<span class="keyword">datatype</span> <span class="variable">variable_name</span>; 
-</pre>
+<span class="keyword">datatype</span> <span class="variable">variable_name</span>;
+                </pre>
             </div>
-            <br>
-            <h4>Example:</h4>
-            <div class="code">
-            <pre>
-<span class="header">#include &lt;iostream&gt;
-using namespace std;</span>
 
-<span class="function">int main()</span> {
-  <span class="keyword">int</span> <span class="variable">myVar</span> = 58;  
-  <span class="comment">//Declares a variable named myVar & 
-  assigns integer value of 58 to it.</span>
-  <span class="keyword">return</span> 0;
-}        </pre>
-        </section>
-        <hr>
-            
-        <!-- Constants -->
-        <section>
-            <h2>1.6 Constants:</h2>
-            <p>Constants are declared with the <strong>"const"</strong> keyword, a type, their name, and an assignment of their constant value. This value must match the declared type, & its fixed (constant) for the duration of the programs.</p>
-            <br>
-            <h4>Example:</h4>
+            <h3>Example:</h3>
             <div class="code">
                 <pre>
 <span class="header">#include &lt;iostream&gt;
 using namespace std;</span>
 
 <span class="function">int main()</span> {
-  <span class="keyword">const int</span> <span class="variable">pie</span> = 3.14;  
-  <span class="comment">//Declares a constant named pie and
-  assigns integer value of 3.14 to it.</span>
-  <span class="keyword">return</span> 0;
-}        </pre>
+    <span class="keyword">int</span> <span class="variable">myVar</span> = 58;  
+    <span class="comment">/*Declares a variable named myVar 
+    and assigns integer value of 58 to it*/</span>
+    <span class="keyword">return</span> 0;
+}        
+                </pre>
             </div>
         </section>
+
         <hr>
+
+        <section id="constants">
+            <h2>Constants:</h2>
+            <p>Constants are declared with the <strong>"const"</strong> keyword, a type, their name, and an assignment
+                of their
+                constant value. This value must match the declared type, & its fixed (constant) for the duration of the
+                programs.</p>
+            <h3>Example:</h3>
+            <div class="code">
+                <pre>
+<span class="header">#include &lt;iostream&gt;
+using namespace std;</span>
+        
+<span class="function">int main()</span> {
+    <span class="keyword">const int</span> <span class="variable">pie</span> = 3.14;  
+    <span class="comment">/*Declares a constant named pie
+    and assigns integer value of 3.14 to it*/</span>
+    <span class="keyword">return</span> 0;
+}        
+                </pre>
+            </div>
+        </section>
+
+        <hr>
+
         <section>
             <h2>Congratulations!</h2>
             <p>Welcome to the programming club! You finished learning the basics of C++!</p>
         </section>
+
         <hr>
+
         <footer>
-            <h5>Next: <a href="operators.html">Operators in C++</a></h5>
-            <p>Found any Error or Mistake? <a href="mailto:dhirenvasnani+cpp@gmail.com">Let me know by clicking here</a></p>
-            <hr>
+            <h3>Next: <a href="/pages/operators.html">Operators in C++</a></h3>
+            <p>Found any Error or Mistake? <a href="mailto:dhirenvasnani+cpp@gmail.com">Let me know by clicking here</a>
+            </p>
         </footer>
-    </body>
+
+    </div>
+</body>
+
 </html>
